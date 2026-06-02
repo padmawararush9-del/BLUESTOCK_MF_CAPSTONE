@@ -1,58 +1,122 @@
-# Mutual Fund Analytics Project
+# BLUESTOCK_MF_CAPSTONE
 
-> End-to-end data pipeline and analytics suite for Indian mutual fund data.
+## Overview
+
+This project is part of my Data Analyst Internship at Bluestock Fintech. The objective is to perform Mutual Fund data ingestion, validation, cleaning, exploration, and analysis using Python, Pandas, SQL, and data visualization tools.
+
+---
 
 ## Project Structure
 
-```
-mf_analysis/
+```text
+BLUESTOCK_MF_CAPSTONE/
+
 ├── data/
-│   ├── raw/               # Source CSVs, JSON from AMFI / mfapi.in
-│   └── processed/         # Cleaned, validated, enriched data
-├── notebooks/             # Jupyter exploration notebooks
-├── sql/                   # SQL queries & schema definitions
-├── dashboard/             # Plotly / Dash dashboard code
-├── reports/               # Auto-generated PDF / HTML reports
-├── data_ingestion.py      # Day 1 – Load, inspect, validate all 10 CSVs
-├── live_nav_fetch.py      # Day 1 – Live NAV fetch from mfapi.in
+│   ├── raw/
+│   └── processed/
+│
+├── dashboard/
+│
+├── notebooks/
+│   ├── 01_data_ingestion.py
+│   ├── 02_data_cleaning.ipynb
+│   └── 03_eda_analysis.ipynb
+│
+├── scripts/
+│   ├── live_nav_fetch.py
+│   └── batch_nav_fetch.py
+│
+├── report/
+│
+├── sql/
+│
+├── README.md
 └── requirements.txt
 ```
 
-## Day 1 Datasets (data/raw/)
+---
 
-| # | File | Rows | Description |
-|---|------|------|-------------|
-| 1 | fund_master.csv | 21 | AMFI scheme master (codes, categories, AUM) |
-| 2 | nav_history.csv | 20,076 | Daily NAV Jan 2020 – May 2026 |
-| 3 | scheme_categories.csv | 22 | SEBI category taxonomy |
-| 4 | aum_monthly.csv | 462 | Month-end AUM per scheme |
-| 5 | top_holdings.csv | 90 | Portfolio holdings per fund |
-| 6 | sip_performance.csv | 120 | SIP returns at various tenures |
-| 7 | fund_returns.csv | 42 | Point-to-point returns vs benchmark |
-| 8 | risk_metrics.csv | 6 | Sharpe, Sortino, Beta, max-drawdown |
-| 9 | benchmark_comparison.csv | 8,365 | Nifty 50/100/200, Sensex index values |
-| 10 | expense_ratios.csv | 21 | Direct vs regular plan TER |
+## Objectives
 
-## Quick Start
+* Load and inspect Mutual Fund datasets.
+* Perform data validation and quality checks.
+* Fetch live NAV data using MFAPI.
+* Process and clean financial datasets.
+* Explore Mutual Fund scheme information.
+* Validate AMFI scheme codes.
+* Prepare data for visualization and dashboard development.
 
-```bash
-pip install -r requirements.txt
-python data_ingestion.py    # Tasks 3, 6, 7
-python live_nav_fetch.py    # Tasks 4, 5
-```
+---
 
-## API Source
+## Technologies Used
 
-Live NAV data: [mfapi.in](https://www.mfapi.in)  
-`GET https://api.mfapi.in/mf/{amfi_code}`
+* Python
+* Pandas
+* NumPy
+* Jupyter Notebook
+* PostgreSQL
+* Matplotlib
+* Seaborn
+* Plotly
+* Requests
+* Git & GitHub
 
-## Key Schemes Tracked
+---
 
-| AMFI Code | Scheme |
-|-----------|--------|
-| 125497 | HDFC Top 100 Fund Direct Growth |
-| 119551 | SBI Bluechip Fund Direct Growth |
-| 120503 | ICICI Prudential Bluechip Fund Direct Growth |
-| 118632 | Nippon India Large Cap Fund Direct Growth |
-| 119092 | Axis Bluechip Fund Direct Growth |
-| 120841 | Kotak Bluechip Fund Direct Growth |
+## Tasks Completed
+
+### Task 3 – Data Ingestion
+
+* Loaded all provided CSV datasets.
+* Checked dataset shape, columns, and data types.
+* Performed initial data inspection.
+* Identified missing values and anomalies.
+
+### Task 4 – Live NAV Fetch
+
+* Retrieved live NAV data from MFAPI.
+* Parsed JSON response.
+* Converted data into Pandas DataFrame.
+* Saved NAV data as CSV.
+
+### Task 5 – Batch NAV Fetch
+
+* Retrieved NAV history for multiple mutual fund schemes.
+* Stored scheme-wise CSV files.
+
+### Task 6 – Fund Master Exploration
+
+* Analyzed fund houses.
+* Explored categories and sub-categories.
+* Reviewed risk classifications.
+
+### Task 7 – AMFI Validation
+
+* Compared AMFI codes across datasets.
+* Calculated dataset coverage.
+* Generated validation summary.
+
+---
+
+## Data Sources
+
+* Kaggle Mutual Fund Dataset
+* MFAPI (https://api.mfapi.in)
+
+---
+
+## Future Work
+
+* Advanced EDA
+* SQL Analytics
+* Dashboard Development
+* Flask API Integration
+* Capstone Report Generation
+
+---
+
+## Author
+
+Arush Padmawar
+
+Data Analyst Intern – Bluestock Fintech
