@@ -1,50 +1,53 @@
-# BLUESTOCK_MF_CAPSTONE
+# Mutual Fund Analytics Capstone
 
 ## Overview
 
-This project is part of my Data Analyst Internship at Bluestock Fintech. The objective is to perform Mutual Fund data ingestion, validation, cleaning, exploration, and analysis using Python, Pandas, SQL, and data visualization tools.
+This project is being developed as part of the Bluestock Fintech Data Analytics Internship. The objective is to build an end-to-end Mutual Fund Analytics platform using Python, SQL, SQLite, and Power BI.
+
+The project covers data ingestion, cleaning, database design, analytics, performance evaluation, and dashboard development.
+
+---
+
+## Project Objectives
+
+* Collect and ingest mutual fund datasets
+* Clean and validate financial data
+* Build a SQLite analytical database
+* Perform SQL-based analytics
+* Generate fund performance insights
+* Build interactive Power BI dashboards
+* Develop advanced analytics and recommendation systems
 
 ---
 
 ## Project Structure
 
 ```text
-BLUESTOCK_MF_CAPSTONE/
+bluestock_mf_capstone/
 
 ├── data/
 │   ├── raw/
-│   └── processed/
-│
-├── dashboard/
-│
+│   ├── processed/
+│   └── db/
+│       └── bluestock_mf.db
+
 ├── notebooks/
-│   ├── 01_data_ingestion.py
+│   ├── 01_data_ingestion.ipynb
 │   ├── 02_data_cleaning.ipynb
-│   └── 03_eda_analysis.ipynb
-│
+│   └── 03_sql_analysis.ipynb
+
 ├── scripts/
-│   ├── live_nav_fetch.py
-│   └── batch_nav_fetch.py
-│
-├── report/
-│
+│   └── live_nav_fetch.py
+
 ├── sql/
-│
-├── README.md
-└── requirements.txt
+│   ├── schema.sql
+│   └── queries.sql
+
+├── reports/
+│   └── data_dictionary.md
+
+└── README.md
 ```
-
----
-
-## Objectives
-
-* Load and inspect Mutual Fund datasets.
-* Perform data validation and quality checks.
-* Fetch live NAV data using MFAPI.
-* Process and clean financial datasets.
-* Explore Mutual Fund scheme information.
-* Validate AMFI scheme codes.
-* Prepare data for visualization and dashboard development.
 
 ---
 
@@ -53,65 +56,82 @@ BLUESTOCK_MF_CAPSTONE/
 * Python
 * Pandas
 * NumPy
+* SQLite
+* SQLAlchemy
 * Jupyter Notebook
-* PostgreSQL
-* Matplotlib
-* Seaborn
-* Plotly
-* Requests
 * Git & GitHub
+* Power BI (Upcoming)
 
 ---
 
-## Tasks Completed
+## Day 1 Deliverables
 
-### Task 3 – Data Ingestion
-
-* Loaded all provided CSV datasets.
-* Checked dataset shape, columns, and data types.
-* Performed initial data inspection.
-* Identified missing values and anomalies.
-
-### Task 4 – Live NAV Fetch
-
-* Retrieved live NAV data from MFAPI.
-* Parsed JSON response.
-* Converted data into Pandas DataFrame.
-* Saved NAV data as CSV.
-
-### Task 5 – Batch NAV Fetch
-
-* Retrieved NAV history for multiple mutual fund schemes.
-* Stored scheme-wise CSV files.
-
-### Task 6 – Fund Master Exploration
-
-* Analyzed fund houses.
-* Explored categories and sub-categories.
-* Reviewed risk classifications.
-
-### Task 7 – AMFI Validation
-
-* Compared AMFI codes across datasets.
-* Calculated dataset coverage.
-* Generated validation summary.
+* Data ingestion pipeline
+* Mutual fund master dataset
+* Historical NAV dataset
+* Live NAV fetch using MFAPI
+* Data validation reports
 
 ---
 
-## Data Sources
+## Day 2 Deliverables
 
-* Kaggle Mutual Fund Dataset
-* MFAPI (https://api.mfapi.in)
+### Data Cleaning
+
+* Fund Master
+* NAV History
+* Investor Transactions
+* Scheme Performance
+* AUM by Fund House
+* Monthly SIP Inflows
+* Category Inflows
+* Industry Folio Counts
+* Portfolio Holdings
+* Benchmark Indices
+
+### Database
+
+* SQLite Star Schema Design
+* Dimension and Fact Tables
+* Database Loading using SQLAlchemy
+* Row Count Validation
+
+### Analytics
+
+* 10 Analytical SQL Queries
+* SIP YoY Growth Analysis
+* Fund Performance Analysis
+
+### Documentation
+
+* Data Dictionary
+* SQL Schema Documentation
 
 ---
 
-## Future Work
+## Current Database Tables
 
-* Advanced EDA
-* SQL Analytics
-* Dashboard Development
-* Flask API Integration
-* Capstone Report Generation
+* dim_fund
+* fact_nav
+* fact_transactions
+* fact_performance
+* fact_aum
+* fact_sip_inflows
+* fact_category_inflows
+* fact_industry_folios
+* fact_portfolio_holdings
+* fact_benchmark_indices
+
+---
+
+## Upcoming Work
+
+* Exploratory Data Analysis (EDA)
+* Performance Analytics
+* Advanced Analytics
+* Power BI Dashboard Development
+* Final Report
+* Project Presentation
 
 ---
 
@@ -119,4 +139,4 @@ BLUESTOCK_MF_CAPSTONE/
 
 Arush Padmawar
 
-Data Analyst Intern – Bluestock Fintech
+Bluestock Fintech Internship – Mutual Fund Analytics Capstone
