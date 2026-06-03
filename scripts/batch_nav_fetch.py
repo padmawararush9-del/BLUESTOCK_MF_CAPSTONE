@@ -6,14 +6,13 @@ print("=" * 60)
 print("TASK 5 - FETCH NAV FOR 5 SCHEMES")
 print("=" * 60)
 
-# Project root
+
 BASE_DIR = Path(__file__).parent.parent.resolve()
 
-# Raw data folder
+
 RAW_DIR = BASE_DIR / "data" / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
-# Schemes from internship document
 schemes = {
     "SBI_Bluechip": 119551,
     "ICICI_Bluechip": 120503,

@@ -1,10 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-# Folder containing the CSV files
 DATA_DIR = Path("data/raw")
 
-# List of datasets
 files = [
     "01_fund_master.csv",
     "02_nav_history.csv",
