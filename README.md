@@ -123,15 +123,50 @@ bluestock_mf_capstone/
 * fact_benchmark_indices
 
 ---
+## EDA & Analytics Completed
 
-## Upcoming Work
+### Exploratory Data Analysis
 
-* Exploratory Data Analysis (EDA)
-* Performance Analytics
-* Advanced Analytics
-* Power BI Dashboard Development
-* Final Report
-* Project Presentation
+Performed detailed exploratory data analysis on mutual fund datasets covering NAV trends, AUM growth, SIP inflows, investor demographics, folio growth, and portfolio allocations.
+
+### Key Visualizations Created
+
+* NAV Trend Analysis (2022–2026)
+* Average NAV Trend with 2023 Bull Run and 2024 Market Correction
+* AUM Growth by Fund House
+* Monthly SIP Inflow Trend
+* Category-wise Inflow Heatmap
+* Investor Age Group Distribution
+* SIP Amount Distribution by Age Group
+* Gender Distribution of Investors
+* SIP Amount by State
+* T30 vs B30 Investor Distribution
+* Mutual Fund Folio Growth
+* NAV Return Correlation Matrix
+* Sector Allocation Donut Chart
+* Folio Growth by Category
+* Active SIP Accounts Growth
+
+### Key Insights
+
+* Mutual fund NAVs showed consistent long-term growth.
+* SIP inflows reached a record ₹31,002 Cr in December 2025.
+* SBI Mutual Fund remained the largest fund house by AUM.
+* Investors aged 26–35 formed the largest investor segment.
+* Mutual fund folios grew from 13.26 Cr to 26.12 Cr between 2022 and 2025.
+* T30 cities accounted for the majority of investors.
+* Equity folios grew significantly faster than debt and hybrid folios.
+
+### Deliverables
+
+* 10 Cleaned Datasets
+* SQLite Database (`bluestock_mf.db`)
+* SQL Schema and Analytical Queries
+* Data Dictionary Documentation
+* 15 EDA Visualizations
+* EDA Findings Documentation
+* Jupyter Notebooks for Analysis
+
 
 ---
 
