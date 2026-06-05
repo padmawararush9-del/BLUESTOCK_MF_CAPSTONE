@@ -167,6 +167,50 @@ Performed detailed exploratory data analysis on mutual fund datasets covering NA
 * EDA Findings Documentation
 * Jupyter Notebooks for Analysis
 
+## Performance Analytics Completed
+
+### Overview
+
+Performed performance and risk analysis on mutual fund schemes using historical NAV data. Calculated key metrics, ranked funds, compared performance against benchmark indices, and built a fund scorecard model.
+
+### Metrics Calculated
+
+* Daily Returns
+* CAGR (1 Year, 3 Year, Available Period)
+* Sharpe Ratio
+* Sortino Ratio
+* Alpha and Beta
+* Maximum Drawdown
+* Tracking Error
+
+### Fund Ranking Model
+
+Built a composite fund scorecard using:
+
+* 30% Weight: 3-Year CAGR Rank
+* 25% Weight: Sharpe Ratio Rank
+* 20% Weight: Alpha Rank
+* 15% Weight: Expense Ratio Rank
+* 10% Weight: Maximum Drawdown Rank
+
+### Benchmark Analysis
+
+* Compared top-performing funds against NIFTY50 and NIFTY100.
+* Calculated tracking error for selected funds.
+* Evaluated risk-adjusted performance against benchmark indices.
+
+### Deliverables
+
+* Performance_Analytics.ipynb
+* returns_computed.csv
+* cagr_report.csv
+* sharpe_values.csv
+* sortino_values.csv
+* alpha_beta.csv
+* max_drawdown.csv
+* fund_scorecard.csv
+* tracking_error.csv
+* benchmark_chart.png
 
 ---
 
