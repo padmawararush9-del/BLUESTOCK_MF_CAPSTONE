@@ -1,6 +1,22 @@
+"""
+Fund Recommendation Engine
+
+Recommends the top mutual funds based on investor
+risk appetite and Sharpe Ratio rankings.
+
+Author: Arush Padmawar
+"""
+
 import pandas as pd
 
-funds = pd.read_csv("../data/processed/clean_performance.csv")
+from pathlib import Path
+import pandas as pd
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+funds = pd.read_csv(
+    BASE_DIR / "data" / "processed" / "clean_performance.csv"
+)
 
 risk_appetite = input(
     "Enter Risk Appetite (Low/Moderate/High): "

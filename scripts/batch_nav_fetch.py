@@ -1,11 +1,16 @@
+"""
+Batch NAV Fetch Script
+
+Fetches NAV data for multiple mutual fund schemes in batches,
+performs validation and cleaning, and stores the consolidated
+NAV dataset for further analysis.
+
+Author: Arush Padmawar
+"""
+
 import requests
 import pandas as pd
 from pathlib import Path
-
-print("=" * 60)
-print("TASK 5 - FETCH NAV FOR 5 SCHEMES")
-print("=" * 60)
-
 
 BASE_DIR = Path(__file__).parent.parent.resolve()
 
@@ -44,7 +49,3 @@ for fund_name, amfi_code in schemes.items():
 
     except Exception as e:
         print(f"✗ Failed: {e}")
-
-print("\n" + "=" * 60)
-print("TASK 5 COMPLETE")
-print("=" * 60)

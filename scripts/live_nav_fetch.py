@@ -1,10 +1,14 @@
+"""
+Live NAV Fetch Script
+
+Fetches and updates Net Asset Value (NAV) data for
+mutual fund schemes and stores the cleaned output.
+
+Author: Arush Padmawar
+"""
+
 import requests
 import pandas as pd
-
-print("=" * 60)
-print("TASK 4 - LIVE NAV FETCH")
-print("=" * 60)
-
 
 url = "https://api.mfapi.in/mf/125497"
 
